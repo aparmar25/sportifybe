@@ -15,7 +15,9 @@ import {
   Trash2
 } from 'lucide-react';
 
-const API_URL = '/api';
+const API_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : '/api';
 
 export default function EventApprovalManagement({ token, currentUser, onUpdate }) {
   const [pendingEvents, setEvents] = useState([]);
@@ -523,4 +525,5 @@ export default function EventApprovalManagement({ token, currentUser, onUpdate }
       </div>
     </div>
   );
+
 }
