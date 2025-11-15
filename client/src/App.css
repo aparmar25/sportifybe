@@ -1,0 +1,57 @@
+@keyframes glowCard {
+	0% {
+		box-shadow: 0 0 4px 1px #f69e3480, 0 0 0px 0px #ffce0040;
+	}
+	50% {
+		box-shadow: 0 0 10px 2px #f69e3480, 0 0 4px 1px #ffce0040;
+	}
+	100% {
+		box-shadow: 0 0 4px 1px #f69e3480, 0 0 0px 0px #ffce0040;
+	}
+}
+
+.animate-glow-card {
+	animation: glowCard 2.5s ease-in-out infinite;
+}
+
+.meetups-album {
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.meetup-photo {
+	position: absolute;
+	width: 270px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px #ff9a0050, 0 0 8px #333a;
+	border: 2px solid #f5f5f5;
+	background: linear-gradient(135deg, #ff5a00 40%, #222 100%);
+	transition: transform 0.3s;
+}
+.meetup-photo:hover {
+	transform: scale(1.08) rotate(-2deg);
+	z-index: 2;
+}
+
+.meetups-cards-grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-rows: repeat(2, minmax(0, 1fr));
+	gap: 2rem;
+	z-index: 1;
+	width: 700px;
+	max-width: 90vw;
+	margin: 0 auto;
+	padding: 2rem;
+	background: rgba(30, 30, 30, 0.7);
+	border-radius: 2rem;
+	box-shadow: 0 8px 32px #ff9a0030, 0 0 12px #333a;
+}
