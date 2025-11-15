@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 
-// FIXED: Use Vite proxy instead of direct URL
-const API_URL = '/api';
+const API_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : '/api';
+
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -124,5 +126,6 @@ const FeedbackForm = () => {
     </div>
   );
 };
+
 
 export default FeedbackForm;
