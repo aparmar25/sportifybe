@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Plus, Trash2, Key, Shield, User, Mail, X } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api` 
-  : '/api';
+const API_URL = '/api';
+
 
 export default function AdminManagement({ token, currentUser }) {
   const [admins, setAdmins] = useState([]);
@@ -393,3 +392,4 @@ export default function AdminManagement({ token, currentUser }) {
   );
 
 }
+
