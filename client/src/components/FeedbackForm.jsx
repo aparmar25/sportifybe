@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api` 
-  : '/api';
+const API_URL = '/api';
 
 
 const FeedbackForm = () => {
@@ -129,3 +127,4 @@ const FeedbackForm = () => {
 
 
 export default FeedbackForm;
+
