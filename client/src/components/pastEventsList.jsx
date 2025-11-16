@@ -14,9 +14,7 @@ import bg1 from "../assets/PasteveBG1.jpeg";
 import bg2 from "../assets/PasteveBG2.jpeg";
 
 // API Configuration
-const API_URL = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api` 
-  : '/api';
+const API_URL = '/api';
 
 // Enhanced wavy border
 const WavyBorder = () => (
