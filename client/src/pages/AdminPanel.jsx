@@ -22,9 +22,7 @@ import {
 import AdminManagement from '../components/AdminManagement';
 import EventApprovalManagement from '../components/EventApprovalManagement';
 
-const API_URL = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api` 
-  : '/api';
+const API_URL = '/api';
 
 // Admin Login Component
 const AdminLogin = ({ onLogin }) => {
@@ -1017,3 +1015,4 @@ export default function AdminPanel() {
   );
 
 }
+
